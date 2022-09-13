@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>Instagram.com</title>
+  <style type="text/css" media="all">
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Sans-Serif;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 25px;
+  border-bottom: 1px solid #dedede;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+.header .logo{
+  font-family: lobster;
+  font-size: 30px;
+  margin-top: -5px;
+  font-weight: 200;
+}
+
+.stories{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #FdFdFd;
+  overflow-x: scroll;
+  margin-top: 40px;
+  border-bottom: 1px solid #dedede;
+}
+.stories::-webkit-scrollbar{
+  display: none;
+}
+.stories .story{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.stories .story .circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-image: linear-gradient(40deg, yellow, #EB1D36, #E80F88);
+}
+.stories .story .circle .profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #fff;
+  background: #dedede;
+  border-radius: 50%;
+}
+.stories .story .user-name{
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: .8;
+}
+
+.media{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.media .media-card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.media .media-card .profile-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+.media .media-card .profile-info .profile{
+  display: flex;
+}
+.media .media-card .profile-info .profile .circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #dedede;
+  margin-right: 10px;
+}
+.media .media-card .profile-info .profile .circle .profile-pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: grey;
+  border-radius: 50%;
+}
+.media .media-card .profile-info .profile .user-name-type{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.media .media-card .profile-info .profile .user-name{
+  font-weight: 600;
+  font-size: 14px;
+}
+.media .media-card .profile-info .profile .type{
+  font-size: 12px;
+  opacity: .6;
+}
+.media .media-card .images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dedede;
+  width: 100%;
+  min-height: 500px;
+}
+.media .media-card .icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.media .media-card .left-icons i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+.media .media-card .right-icons i{
+  font-size: 25px;
+}
+.media .media-card .text{
+  padding: 0 20px;
+  font-size: 15px;
+}
+.media .media-card .text .likes{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.media .media-card .text .content{
+  margin-bottom: 5px;
+}
+.media .media-card .text .content strong{
+  margin-right: 5px;
+}
+.media .media-card .text .comments{
+  margin-bottom: 15px;
+  opacity: .5;
+}
+.media .media-card .text .time{
+  font-size: 10px;
+  font-weight: 400;
+  opacity: .4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body>
+	<section class="header">
+	  <div class="">
+	    <i class="fas fa-camera"></i>
+	  </div>
+	  <div class="logo">
+	    Instagram
+	  </div>
+	  <div class="chats">
+	   <i class="fa-regular fa-paper-plane"></i>
+	  </div>
+	</section>
+	<section class="stories">
+	  <div class="story your-story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    Your Story
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	  <div class="story">
+	    <div class="circle">
+	      <div class="profile">
+	        <img src="" alt="" />
+	      </div>
+	    </div>
+	    <div class="user-name">
+	    techboydk
+	  </div>
+	  </div>
+	</section>
+	<section class="media">
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	  <div class="media-card">
+      <div class="profile-info">
+        <div class="profile">
+          <div class="circle">
+            <div class="profile-pic">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="user-name-type">
+            <div class="user-name">
+              techboydk
+            </div>
+            <div class="type">
+              Original audio
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="" />
+      </div>
+      <div class="icons">
+        <div class="left-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div class="right-icons">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+      <div class="text">
+        <p class="likes">9,999 likes</p>
+        <p class="content"><strong>techboydk</strong>Good morning everyone</p>
+        <p class="comments">view all 2,822 comments</p>
+        <p class="time">3 days ago</p>
+        <p class=""></p>
+        <p class=""></p>
+        <p class=""></p>
+      </div>
+	  </div>
+	</section>
+</body>
+</html>
